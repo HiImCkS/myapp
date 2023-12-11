@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upload_image</title>
+    <style>
+        .container{
+            margin-top: 70px;
+            margin-left: 160px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1> Upload image ... </h1> -->
+    <div class="container">
+        <h3> Upload Image here  </h3>
+
+        <form action="{% url 'upload_image' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="submit">
+        </form>
+ 
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            margin-top: 8px;
+        }
+        .container{
+            border: 3px;
+            border-radius: 3px;
+            border-color: aquamarine;
+            display: block;
+            margin-left: 500px;
+            margin-right: 560px;
+            padding-top: 20px;
+            padding-bottom: 30px;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: rgb(232, 209, 209);
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+        
+        <form action="" method="post">
+            {% csrf_token %}
+            <h2>SignUp</h2>
+            {{ form.as_p }}
+            <div>
+                <label for = "username">Username</label>
+                <input type="text" placeholder="Username" name = "username" id="name">
+            </div>
+            <div>
+                <label for = "email">Email </label><br>
+                <input type="email" placeholder="Email" name = "email" id="email">
+            </div>
+            <div>
+                <label for = "password">Password</label>
+                <input type="password" placeholder="Password" name = "password" id="password">
+            </div>
+            <div>
+                <label for = "password2"> Conform Password</label>
+                <input type="password" placeholder="Confirm Password" name = "password2" id="password2">
+            </div>
+            <p>already have account <a href="/login"> Login </a>  </p>
+           
+            <button type="submit"> SignUp</button>
+       
+           
+        </form>
+        
+    </div>
+
+</body>
+</html>
+
